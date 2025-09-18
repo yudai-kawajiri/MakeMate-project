@@ -79,3 +79,4 @@ gem 'paper_trail'             # 仕様変更履歴記録
 gem 'prawn'                   # PDF作成
 gem 'prawn-table'             # テーブル形式PDF
 gem 'thinreports'             # 帳票作成（日本語対応）
+
