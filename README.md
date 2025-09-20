@@ -88,3 +88,4 @@ gem 'paper_trail'             # 仕様変更履歴記録
 gem 'prawn'                   # PDF作成
 gem 'prawn-table'             # テーブル形式PDF
 gem 'wicked_pdf'              # HTML→PDF変換
+
