@@ -163,4 +163,5 @@ gem 'wicked_pdf'              # HTML→PDF変換
       　　
   遷移図: [https://www.figma.com/design/tK57COTX5tKjmMFua3M6uC/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3--Community-?node-id=0-1&t=BNNZU9tAVH2bor3R-1]
 
-  ER図: [https://drive.google.com/file/d/13lDZmIJ2lwJJoCzGF6DW0FoeCyDjy6pH/view?usp=sharing]
+  ER図: [https://drive.google.com/file/d/1Imtg3qH_eaN0GEcoQCwvOwwEoyiYg9kv/view?usp=sharing]
+
