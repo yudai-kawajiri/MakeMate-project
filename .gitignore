@@ -82,3 +82,9 @@ desktop.ini             # Windowsのフォルダカスタマイズ設定（ア�
 node_modules/           # npmパッケージディレクトリ（数万ファイルの巨大フォルダ）
 npm-debug.log*          # npmのデバッグログファイル（エラー発生時に生成）
 yarn-debug.log*         # Yarnのデバッグ
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

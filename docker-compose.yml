@@ -11,7 +11,7 @@ services:
     # データベースの初期設定用環境変数
     environment:
       POSTGRES_DB: makemate_development      # 作成するデータベース名
-      POSTGRES_USER: user               # データベースのユーザー名
+      POSTGRES_USER: postgres               # データベースのユーザー名
       POSTGRES_PASSWORD: password           # データベースのパスワード
 
     # データの永続化設定（コンテナを削除してもデータが残る）
@@ -33,7 +33,7 @@ services:
 
     # ファイル共有設定（ホスト:コンテナ）
     volumes:
-      - .:/app                              # 現在のディレクトリをコンテナの/appにマウント
+      - .:/makemate                              # 現在のディレクトリをコンテナの/appにマウント
       - bundle_cache:/usr/local/bundle      # gemファイルをキャッシュして高速化
 
     # ポートマッピング（ホスト:コンテナ）

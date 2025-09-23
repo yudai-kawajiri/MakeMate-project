@@ -1,28 +1,29 @@
 FROM ruby:3.2.0
 
-# 必要なパッケージをインストール
-RUN apt-get update -qq && apt-get install -y \
-    nodejs \
-    npm \
-    postgresql-client \
-    vim
-
 # 作業ディレクトリを設定
-WORKDIR /app
+WORKDIR /makemate
 
-# GemfileとGemfile.lockをコピー（後で作成）
-COPY Gemfile* ./
+# Node.js、Yarn、PostgreSQL clientを一括インストール（推奨）
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y \
+        nodejs \
+        postgresql-client \
+    && npm install --global yarn \
+    && rm -rf /var/lib/apt/lists/*
 
 # Bundlerをインストール
 RUN gem install bundler
 
-# 依存関係をインストール
+# 重要：先にGemfileだけコピー
+COPY Gemfile Gemfile.lock ./
+
+# その後にbundle install
 RUN bundle install
 
-# アプリケーションコードをコピー
+# 最後にアプリケーションコード全体をコピー
 COPY . .
 
-# ポート3000を公開
+# ポートを公開
 EXPOSE 3000
 
 # サーバーを起動
