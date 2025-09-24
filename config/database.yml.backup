@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql      # PostgreSQL用アダプター
+  encoding: unicode        # PostgreSQL用エンコーディング
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres       # PostgreSQLのユーザー名
+  password: password       # パスワード
+  host: db                 # Dockerサービス名
+
+development:
+  <<: *default
+  database: MakeMate_development
+
+test:
+  <<: *default
+  database: MakeMate_test
+
+production:
+  <<: *default
+  database: MakeMate_production
+  username: MakeMate
+  password: <%= ENV["MAKEMATE_DATABASE_PASSWORD"] %>

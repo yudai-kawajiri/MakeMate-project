@@ -3,7 +3,7 @@ FROM ruby:3.2.0
 # 作業ディレクトリを設定
 WORKDIR /makemate
 
-# Node.js、Yarn、PostgreSQL clientを一括インストール（推奨）
+# Node.js、Yarn、PostgreSQL clientを一括インストール
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get install -y \
         nodejs \
