@@ -24,6 +24,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
+  # 本番環境で変更！Deviseが送信するメールの送信元アドレス
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
@@ -36,6 +37,7 @@ Devise.setup do |config|
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
+  # 使用するORM（データベースとのやり取りを助ける仕組み）を指定
   require 'devise/orm/active_record'
 
   # ==> Configuration for any authentication mechanism
@@ -58,11 +60,13 @@ Devise.setup do |config|
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
+  # 認証キーの前後にある空白を自動で削除
   config.case_insensitive_keys = [:email]
 
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
+  # セッションにユーザー情報を保存しない認証方法を指定
   config.strip_whitespace_keys = [:email]
 
   # Tell if authentication through request.params is enabled. True by default.
@@ -97,6 +101,7 @@ Devise.setup do |config|
   # Notice that if you are skipping storage for all authentication paths, you
   # may want to disable generating routes to Devise's sessions controller by
   # passing skip: :sessions to `devise_for` in your config/routes.rb
+  # セッションにユーザー情報を保存しない認証方法を指定
   config.skip_session_storage = [:http_auth]
 
   # By default, Devise cleans up the CSRF token on authentication to
@@ -123,6 +128,7 @@ Devise.setup do |config|
   # a value less than 10 in other environments. Note that, for bcrypt (the default
   # algorithm), the cost increases exponentially with the number of stretches (e.g.
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
+  # パスワードをハッシュ化する際の処理の重さ
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
@@ -157,6 +163,7 @@ Devise.setup do |config|
   # initial account confirmation) to be applied. Requires additional unconfirmed_email
   # db field (see migrations). Until confirmed, new email is stored in
   # unconfirmed_email column, and copied to email column on successful confirmation.
+  # メールアドレス変更時に、再度確認メールを送信
   config.reconfirmable = true
 
   # Defines which key will be used when confirming an account
@@ -167,6 +174,7 @@ Devise.setup do |config|
   # config.remember_for = 2.weeks
 
   # Invalidates all the remember me tokens when the user signs out.
+  # ログアウトしたときに、すべての「ログインを維持する」設定を無効化
   config.expire_all_remember_me_on_sign_out = true
 
   # If true, extends the user's remember period when remembered via cookie.
@@ -178,13 +186,14 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
+  # パスワードの最小文字数と最大文字数を設定
   config.password_length = 6..128
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
+  # メールアドレスの形式を検証するための正規表現
   config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
-
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
@@ -224,6 +233,7 @@ Devise.setup do |config|
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
   # change their passwords.
+  # パスワードリセット用トークンの有効期限
   config.reset_password_within = 6.hours
 
   # When set to false, does not sign a user in automatically after their password is
@@ -266,6 +276,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html, :turbo_stream]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
+  # ログアウトのHTTPメソッドをDELETEに設定
   config.sign_out_via = :delete
 
   # ==> OmniAuth
@@ -302,6 +313,7 @@ Devise.setup do |config|
   # apps is `200 OK` and `302 Found` respectively, but new apps are generated with
   # these new defaults that match Hotwire/Turbo behavior.
   # Note: These might become the new default in future versions of Devise.
+  # Hotwire/Turboと連携する際のHTTPステータスコードを設定
   config.responder.error_status = :unprocessable_entity
   config.responder.redirect_status = :see_other
 
