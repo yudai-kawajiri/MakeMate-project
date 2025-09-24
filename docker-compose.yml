@@ -1,61 +1,51 @@
-# Docker Composeのバージョン指定（3.8は安定版）
-version: '3.8'
+# Docker Composeバージョン指定
+# version: '3.8'
 
-# 起動するサービス（コンテナ）の定義
+# サービス定義開始
 services:
-  # データベースサービス（PostgreSQL）
+  # PostgreSQLサービス
   db:
-    # PostgreSQL公式イメージのバージョン15を使用
+    # PostgreSQL公式イメージ
     image: postgres:15
-
-    # データベースの初期設定用環境変数
-    environment:
-      POSTGRES_DB: makemate_development      # 作成するデータベース名
-      POSTGRES_USER: postgres               # データベースのユーザー名
-      POSTGRES_PASSWORD: password           # データベースのパスワード
-
-    # データの永続化設定（コンテナを削除してもデータが残る）
+    # 環境変数ファイル読み込み
+    env_file:
+      - .env
+    # データ永続化設定
     volumes:
-      - postgres_data:/var/lib/postgresql/data  # 名前付きボリュームでDBデータを保存
-
-    # ポートマッピング（ホスト:コンテナ）
+      - postgres_data:/var/lib/postgresql/data
+    # ポートマッピング
     ports:
-      - "5432:5432"                         # ホストの5432番ポートをコンテナの5432番に接続
+      - "5432:5432"
 
-  # Webアプリケーションサービス（Rails）
+  # Railsアプリサービス
   web:
-    # カレントディレクトリのDockerfileを使ってイメージをビルド
+    # Dockerfileからビルド
     build: .
-
-    # コンテナ起動時に実行するコマンド
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails server -b 0.0.0.0"
-    #                 ↑古いPIDファイル削除    ↑Railsサーバー起動（全IPからアクセス可能）
-
-    # ファイル共有設定（ホスト:コンテナ）
+    # 明示的に記載
+    working_dir: /makemate
+    # 起動コマンド
+    command: sleep infinity
+    # ボリュームマウント
     volumes:
-      - .:/makemate                              # 現在のディレクトリをコンテナの/appにマウント
-      - bundle_cache:/usr/local/bundle      # gemファイルをキャッシュして高速化
-
-    # ポートマッピング（ホスト:コンテナ）
+      - .:/makemate
+      - bundle_cache:/usr/local/bundle
+    # ポートマッピング
     ports:
-      - "3000:3000"                         # ホストの3000番ポートをコンテナの3000番に接続
-
-    # サービスの依存関係（dbが起動してからwebを起動）
+      - "3000:3000"
+    # 依存関係（dbサービス後に起動）
     depends_on:
       - db
-
-    # Railsアプリケーション用の環境変数
-    environment:
-      # データベース接続URL（ユーザー:パスワード@ホスト:ポート/データベース名）
-      DATABASE_URL: postgres://postgres:password@db:5432/makemate_development
-
-    # 標準入力を開いたままにする（デバッグ時のbinding.pryなどで必要）
+    # 環境変数ファイル読み込み
+    env_file:
+      - .env
+    # 標準入力有効化
     stdin_open: true
-
-    # 疑似TTYを割り当てる（ターミナルでの対話的操作を可能にする）
+    # TTY有効化
     tty: true
 
-# 名前付きボリュームの定義（データの永続化用）
+# ボリューム定義
 volumes:
-  postgres_data:    # PostgreSQLのデータを保存する領域
-  bundle_cache:     # Rubyのgemファイルをキャッシュする領域
+  # PostgreSQLデータ保存領域
+  postgres_data:
+  # gemキャッシュ領域
+  bundle_cache:
