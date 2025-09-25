@@ -592,3 +592,143 @@ Migrating to DeviseCreateUsers (20250924124425)
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4197437650312313400)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2025-09-25 09:43:54 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 508)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 4480)
+  Rendered layout layouts/application.html.erb (Duration: 94.4ms | Allocations: 50242)
+Completed 200 OK in 161ms (Views: 134.2ms | ActiveRecord: 9.8ms | Allocations: 64788)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.18.0.1 at 2025-09-25 09:43:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 172.18.0.1 at 2025-09-25 09:43:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 76)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 932)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 4047)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 4478)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.18.0.1 at 2025-09-25 09:43:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 172.18.0.1 at 2025-09-25 09:43:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 76)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 932)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2830)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3261)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.18.0.1 at 2025-09-25 09:43:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 172.18.0.1 at 2025-09-25 09:43:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 76)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 932)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2830)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 3261)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.18.0.1 at 2025-09-25 09:43:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 172.18.0.1 at 2025-09-25 09:44:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 438)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2075)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 5443)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 6509)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.18.0.1 at 2025-09-25 09:44:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 172.18.0.1 at 2025-09-25 09:44:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 438)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2077)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4299)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 5373)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.18.0.1 at 2025-09-25 09:44:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 172.18.0.1 at 2025-09-25 09:50:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 438)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2074)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4293)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 5362)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.18.0.1 at 2025-09-25 09:50:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 172.18.0.1 at 2025-09-25 09:53:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 438)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2074)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4290)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 5370)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 172.18.0.1 at 2025-09-25 09:53:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/users/sign_up" for 172.18.0.1 at 2025-09-25 09:53:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout /usr/local/bundle/gems/turbo-rails-2.0.12/app/views/layouts/turbo_rails/frame.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/turbo_rails/frame
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.5ms | Allocations: 216)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 134)
+  Rendered devise/registrations/new.html.erb within layouts/turbo_rails/frame (Duration: 9.7ms | Allocations: 2452)
+  Rendered layout /usr/local/bundle/gems/turbo-rails-2.0.12/app/views/layouts/turbo_rails/frame.html.erb (Duration: 10.6ms | Allocations: 2675)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 3803)
+
+
+Started GET "/users/sign_up" for 172.18.0.1 at 2025-09-25 09:53:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout /usr/local/bundle/gems/turbo-rails-2.0.12/app/views/layouts/turbo_rails/frame.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/turbo_rails/frame
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered devise/registrations/new.html.erb within layouts/turbo_rails/frame (Duration: 5.8ms | Allocations: 1189)
+  Rendered layout /usr/local/bundle/gems/turbo-rails-2.0.12/app/views/layouts/turbo_rails/frame.html.erb (Duration: 6.4ms | Allocations: 1285)
+Completed 200 OK in 16ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 1793)
+
+
+Started GET "/users/sign_in" for 172.18.0.1 at 2025-09-25 09:53:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout /usr/local/bundle/gems/turbo-rails-2.0.12/app/views/layouts/turbo_rails/frame.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/turbo_rails/frame
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 76)
+  Rendered devise/sessions/new.html.erb within layouts/turbo_rails/frame (Duration: 5.1ms | Allocations: 932)
+  Rendered layout /usr/local/bundle/gems/turbo-rails-2.0.12/app/views/layouts/turbo_rails/frame.html.erb (Duration: 6.9ms | Allocations: 1028)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 1589)
+
+
