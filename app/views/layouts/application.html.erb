@@ -13,10 +13,10 @@
 
   <body>
     <p class="notice"><%= notice %></p>
+    # 成功時のメッセージ（例：「ログインしました」）
     <p class="alert"><%= alert %></p>
-
-    <%# 修正点: container を削除し、w-full を適用して幅を画面いっぱいに広げる %>
-    <main class="w-full mx-auto mt-28 px-5">
+    # 失敗時のメッセージ（例：「無効なパスワードです」）
+    <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
   </body>

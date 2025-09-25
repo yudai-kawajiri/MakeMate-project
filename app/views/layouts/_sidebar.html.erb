@@ -1,6 +1,0 @@
-<%# Deviseが生成するログアウト処理のためのURLヘルパー %>
-<div class="logout-link-container">
-  <%= link_to "ログアウト", destroy_user_session_path,
-      data: { turbo_method: :delete },
-      class: "text-red-500 hover:text-red-700 font-semibold" %>
-</div>
